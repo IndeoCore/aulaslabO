@@ -9,7 +9,9 @@ ProdutoComDesconto::ProdutoComDesconto(string nome, double preco) : Produto(nome
 ProdutoComDesconto::ProdutoComDesconto(string nome, double preco, double desconto) : Produto(nome, preco), 
                                                                                desconto(desconto) {}
 
-ProdutoComDesconto::~ProdutoComDesconto() {}
+ProdutoComDesconto::~ProdutoComDesconto() {
+    cout << "Produto " << nome << " destruido" << endl;
+}
 
 double ProdutoComDesconto::getDesconto() {
     return desconto;
@@ -19,4 +21,9 @@ void ProdutoComDesconto::setDesconto(double desconto) {
     this->desconto = desconto;
 }
 
-//Implemente o metodo getPreco redefinido
+ double ProdutoComDesconto::getPreco(){
+    double valor;
+    valor = this->preco*(1 - getDesconto());
+    return valor;
+}
+

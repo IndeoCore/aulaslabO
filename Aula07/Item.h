@@ -4,7 +4,7 @@
 #include "Produto.h"
 
 class Item {
-private:
+protected:
     Produto* produto;
     int quantidade;
 

@@ -6,7 +6,7 @@
 using namespace std;
 
 class Produto {
-private:
+protected:
     string nome;
     double preco;
 
@@ -15,7 +15,7 @@ public:
     ~Produto();
 
     string getNome();
-    double getPreco();
+    virtual double getPreco();
     void imprimir();
 };
 

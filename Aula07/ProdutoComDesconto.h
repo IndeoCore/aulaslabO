@@ -14,8 +14,8 @@ public:
 
     double getDesconto();
     void setDesconto(double desconto);
-    //redefina o metodo getPreco
-private:
+    virtual double getPreco();
+protected:
     double desconto;
 };
 
