@@ -17,19 +17,8 @@ int Item::getQuantidade() {
     return quantidade;
 }
 
-double Item::calcularPrecoTotal() {
-    try
-    {
-        double preco;
-        preco = produto->getPreco() * quantidade;
-        return preco;
-    }
-    catch(logic_error *e)
-    {
-        delete e;
-        return 0;
-    }
-    
+double Item::calcularPrecoTotal() {   
+    return produto->getPreco() * quantidade;  
 }
 
 void Item::setQuantidade(int quantidade) {

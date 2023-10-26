@@ -49,4 +49,9 @@ void teste3(){
    p2->setDisponivel(false);
    p4->setDisponivel(false);
    cout << pd1->calcularPrecoTotal() << endl;
+   delete pd1;
+   delete p1;
+   delete p2;
+   delete p3;
+   delete p4;
 }

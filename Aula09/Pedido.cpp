@@ -38,7 +38,15 @@ double Pedido::calcularPrecoTotal(){
     }
     double precoTotal = 0;
     for(int i = 0; i < this->getQuantidadeItens(); i++){
-        precoTotal += itens[i]->calcularPrecoTotal();
+        try
+        {
+            precoTotal += itens[i]->calcularPrecoTotal();
+        }
+        catch(logic_error *e)
+        {
+            delete e;
+            
+        }
     }
     return precoTotal;
 }
